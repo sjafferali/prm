@@ -6,6 +6,7 @@ PKG_VERSION="1.1.4.1"
 BUILD_NUMBER="1"
 PKG_NAME="prm"
 PKG_DESCRIPTION="Process Resource Monitor"
+URL="https://github.com/sjafferali/prm"
 
 PREFIX="usr/local/prm"
 SBIN_PREFIX="usr/local/sbin"
@@ -26,7 +27,7 @@ fpm --rpm-user root --rpm-group root \
         --config-files "$PREFIX/ignore_pslist" --config-files "$PREFIX/ignore_cmd" \
         --config-files "$PREFIX/internals.conf" --config-files "$PREFIX/email.tpl" \
         --config-files "$PREFIX/ignore_users" --config-files "$PREFIX/rules" \
-        --config-files "$PREFIX/prios" $PREFIX "prm=/etc/cron.d/" "$SBIN_PREFIX"
+        --config-files "$PREFIX/prios" --url $URL $PREFIX "prm=/etc/cron.d/" "$SBIN_PREFIX"
 
 mv ${PKG_NAME}-* ..
 cd ..
