@@ -26,7 +26,7 @@ fpm --rpm-user root --rpm-group root \
         --config-files "$PREFIX/ignore_pslist" --config-files "$PREFIX/ignore_cmd" \
         --config-files "$PREFIX/internals.conf" --config-files "$PREFIX/email.tpl" \
         --config-files "$PREFIX/ignore_users" --config-files "$PREFIX/rules" \
-        --config-files "$PREFIX/prios" -e $PREFIX "prm=/etc/cron.d/" "$SBIN_PREFIX"
+        --config-files "$PREFIX/prios" $PREFIX "prm=/etc/cron.d/" "$SBIN_PREFIX"
 
 mv ${PKG_NAME}-* ..
 cd ..
