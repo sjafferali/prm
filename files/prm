@@ -402,7 +402,7 @@ kill_check MAX_MEM "$MAX_MEM" "pmem" "$mem"
 kill_check MAX_CPU "$MAX_CPU" "pcpu" "$cpu"
 
 # set niceness levels
-setnice $pid
+#setnice $pid
 }
 
 setnice() {
@@ -631,7 +631,7 @@ else
                 pre
                 get_pslist
                 get_procinfo
-                setnice prios
+                #setnice prios
                 end=`date +"%s"`
                 runtime=$[end-start]
                 ps_size=`wc -l $PSLIST_CACHE | awk '{print$1}'`
