@@ -15,6 +15,9 @@ build_dir=$data_dir/build
 rm -rf $build_dir
 mkdir -p $build_dir/{$PREFIX,$SBIN_PREFIX}
 rsync -az files/ $build_dir/$PREFIX/
+mkdir $build_dir/$PREFIX/tmp
+mkdir $build_dir/$PREFIX/rules
+mkdir $build_dir/$PREFIX/logs
 cp -a prm $build_dir/$SBIN_PREFIX
 cp -a cron.prm $build_dir/prm
 cd $build_dir
