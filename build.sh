@@ -2,7 +2,7 @@
 
 set -u -e
 
-PKG_VERSION="1.1.4.1"
+PKG_VERSION="1.1.5"
 BUILD_NUMBER="1"
 PKG_NAME="prm"
 PKG_DESCRIPTION="Process Resource Monitor"
